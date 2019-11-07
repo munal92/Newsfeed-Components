@@ -168,9 +168,3 @@ data.forEach(cont => {
 
 
 
-
-allButtons.forEach((event)=>{
-  event.addEventListener('click',(e)=>{
-    event.classList.toggle('article-open')
-  })
-});
