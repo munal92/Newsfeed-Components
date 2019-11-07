@@ -147,14 +147,12 @@ const createCompenents = (title, date,firstParagraph,secondParagraph,thirdParagr
   bttn.textContent = "Read Me";
 
   
-  bttn.addEventListener('click', () => {
+  
+  bttn.addEventListener('click', ()=> {
+    article.classList.toggle('article-open');
+    article.classList.toggle('close');
+  })
     
-    p1.classList.toggle('article-open');
-    p2.classList.toggle('article-open');
-    p3.classList.toggle('article-open');
-    console.log('clicked!');
-  });
-
   return article;
 }
 
@@ -169,3 +167,10 @@ data.forEach(cont => {
 
 
 
+
+
+allButtons.forEach((event)=>{
+  event.addEventListener('click',(e)=>{
+    event.classList.toggle('article-open')
+  })
+});
